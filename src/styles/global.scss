@@ -1,0 +1,74 @@
+:root {
+    // colors
+    --ph-dark-purple: #2D1E41;
+    --ph-light-purple: #BD6FF5;
+    --ph-plain-white: #FDFDFD;
+    --ph-plain-black: #0C0C0C;
+}
+
+// @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&display=swap');
+
+@font-face {
+    font-family: 'Inter Tight';
+    src: url('/src/assets/fonts/InterTight-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter Tight';
+    src: url('/src/assets/fonts/InterTight-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter Tight';
+    src: url('/src/assets/fonts/InterTight-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter Tight';
+    src: url('/src/assets/fonts/InterTight-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter Tight';
+    src: url('/src/assets/fonts/InterTight-ExtraLight.ttf') format('truetype');
+    font-weight:200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter Tight';
+    src: url('/src/assets/fonts/InterTight-Light.ttf') format('truetype');
+    font-weight:300;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    max-width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "Inter Tight";
+    font-weight: 400;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
