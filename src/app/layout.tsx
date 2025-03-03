@@ -80,7 +80,7 @@ export default function RootLayout({
           <AppShell
             layout="default"
             header={{ height: 80 }}
-            padding="xl"
+            // padding="xl"
             styles={{
               header: { backgroundColor: "var(--ph-dark-purple)", height: "80px" },
               main: { paddingBottom: 0 },
