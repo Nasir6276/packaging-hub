@@ -1,9 +1,18 @@
+"use client"
+
 import { BackgroundImage, Box, Container, Flex, Image, Stack, Text } from "@mantine/core"
 import heroImage from "@/assets/images/scracth.png"
 import ShopNow from "@/component/ShopNow"
 import WomanWithBag from "@/assets/images/Woman carrying totebag mockup.jpg"
 import officeSpace from "@/assets/images/Office Space with Posters Mockup.jpg"
 import paperBag from "@/assets/images/paperbag.png"
+import flatLogo from "@/assets/logos/LOGO ISOLATED PRIMARY.png"
+import blackBox from "@/assets/images/boxBlack.png"
+import womanWithBlackBox from "@/assets/images/womanHoldingBoxBlack.png"
+import womanWithToteBag from "@/assets/images/womanHoldingToteBagBlack.png"
+import blackPaperBag from "@/assets/images/blackPaperbag.png"
+import { Carousel } from "@mantine/carousel"
+import classes from "./demo.module.css"
 
 export default function Home() {
   return (
@@ -42,7 +51,7 @@ export default function Home() {
             direction={{ base: "column", md: "row" }}
             align={{ base: "flex-start", md: "center" }}
             justify={{ base: "center", md: "space-between" }}
-            gap={60}
+            gap={{ base: 20, md: 60 }}
           >
             <Stack flex={1}>
               <Text fw={400} fz={12} tt={"uppercase"} ta={"left"} c={"var(--ph-plain-black)"}>
@@ -78,7 +87,7 @@ export default function Home() {
             direction={{ base: "column-reverse", md: "row" }}
             align={{ base: "flex-start", md: "center" }}
             justify={{ base: "center", md: "space-between" }}
-            gap={60}
+            gap={{ base: 20, md: 60 }}
           >
             <Flex
               flex={1}
@@ -161,8 +170,83 @@ export default function Home() {
       </Box>
 
       <Box bg={"var(--ph-black-shade-200)"} py={{ base: 50, md: 100 }}>
-        <Container size={1200} px={{ base: 24, xl: 0 }}></Container>
+        <Container size={1200} px={{ base: 24, xl: 0 }}>
+          <Stack gap={20}>
+            <Image src={flatLogo.src} alt="fllatlogo" h={20} w={20} />
+            <Text
+              fz={{ base: 38, md: 44 }}
+              fw={{ base: 500, md: 700 }}
+              c={"var(--ph-plain-black)"}
+              ta={"left"}
+              lh={{ base: "38px", md: "44px" }}
+            >
+              Why Choose Packaging Hub?
+            </Text>
+            <Text fz={12} fw={400} c={"var(--ph-plain-black)"} ta={"left"} maw={600}>
+              Discover our current best-sellers and customer favorites. Each product is a testament
+              to Packaging Hub&apos;s commitment to combining style, durability, and functionality.
+            </Text>
+            <Carousel
+              height={400}
+              slideSize={{ base: "50%", md: "33.333333%" }}
+              align="start"
+              slideGap={30}
+              loop
+              classNames={classes}
+            >
+              {CarouselData.map((i) => (
+                <Carousel.Slide key={i.title}>
+                  <Flex
+                    h={"100%"}
+                    align={"flex-start"}
+                    justify={"space-between"}
+                    direction={"column"}
+                    p={20}
+                    style={{ border: "0.5px solid var(--ph-black-shade)" }}
+                  >
+                    <Image src={i.image.src} alt={i.title} h={180} w={180} fit="fill" />
+                    <Box>
+                      <Text fz={16} fw={500} ta={"left"} c={"var(--ph-plain-black)"}>
+                        {i.title}
+                      </Text>
+                      <Text fz={12} fw={400} ta={"left"} c={"var(--ph-black-shade)"}>
+                        {i.description}
+                      </Text>
+                    </Box>
+                  </Flex>
+                </Carousel.Slide>
+              ))}
+            </Carousel>
+          </Stack>
+        </Container>
       </Box>
     </>
   )
 }
+
+const CarouselData = [
+  {
+    title: "Quality Craftsmanship",
+    description:
+      "Meticulously crafted using premium materials, our bags are a testament to enduring quality.ensuring you're always prepared for any journey.",
+    image: blackBox,
+  },
+  {
+    title: "Versatility",
+    description:
+      "From the office to weekend getaways, Packaging Hub bags seamlessly blend style with practicality, ensuring you're always prepared for any journey.",
+    image: womanWithBlackBox,
+  },
+  {
+    title: "Durability",
+    description:
+      "Built to last, our product boasts exceptional durability, withstanding rigorous use and harsh environments, ensuring long-term performance and reliability.",
+    image: blackPaperBag,
+  },
+  {
+    title: "Sustainability",
+    description:
+      "We're dedicated to sustainable practices, sourcing eco-friendly materials and crafting durable bags that minimize waste and promote long-term use.",
+    image: womanWithToteBag,
+  },
+]

@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import "../styles/global.scss"
 import "@mantine/core/styles.css"
+import "@mantine/carousel/styles.css"
 import localFont from "next/font/local"
 import {
   AppShell,
