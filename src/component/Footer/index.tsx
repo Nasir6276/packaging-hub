@@ -10,7 +10,7 @@ import { IoLogoYoutube } from "react-icons/io5"
 
 export default function Footer() {
   return (
-    <Box bg={"var(--plain-white)"} pt={53}>
+    <Box bg={"var(--plain-white)"} py={53}>
       <Container size={1200} px={0}>
         <Flex
           direction={{ base: "column", md: "row" }}
@@ -23,7 +23,7 @@ export default function Footer() {
             <Link href={"/"}>
               <Image src={coloredLogo.src} alt="logo" h={25} />
             </Link>
-            <Text maw={400} c={"var(--ph-plain-black)"} fz={16} fw={400}>
+            <Text maw={400} c={"var(--ph-plain-black)"} fz={{ base: 12, md: 16 }} fw={400}>
               We believe in the power of a well-crafted bag to enhance your lifestyle. Explore our
               curated collection of premium bags that seamlessly blend style, functionality, and
               durability.
@@ -50,7 +50,7 @@ export default function Footer() {
             align={{ base: "flex-start", md: "center" }}
             gap={20}
           >
-            <Text fz={14} fw={400}>
+            <Text fz={{ base: 12, md: 16 }} fw={400}>
               &copy;2025 PackagingHub. All right reserved.
             </Text>
 
@@ -121,7 +121,7 @@ interface QuickLinkProps {
 const QuickLinks = ({ title, links, isBlankTarget = false }: QuickLinkProps) => {
   return (
     <Box>
-      <Text fz={16} fw={500} c={"var(--ph-plain-black)"} tt={"uppercase"} mb={16}>
+      <Text fz={{ base: 12, md: 16 }} fw={500} c={"var(--ph-plain-black)"} tt={"uppercase"} mb={16}>
         {title}
       </Text>
 
@@ -135,7 +135,7 @@ const QuickLinks = ({ title, links, isBlankTarget = false }: QuickLinkProps) => 
             target={isBlankTarget ? "_blank" : "_self"}
             tt={"capitalize"}
             c={"var(--ph-plain-black)"}
-            fz={16}
+            fz={{ base: 12, md: 16 }}
             fw={400}
           >
             {title}

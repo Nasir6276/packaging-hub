@@ -14,7 +14,7 @@ export default function ShopNow({ bgColor, textColor }: ShopNowProps) {
         c={textColor}
         color={bgColor}
         mt={"md"}
-        fz={12}
+        fz={{ base: 12, md: 16 }}
         fw={400}
         size="md"
         w={100}

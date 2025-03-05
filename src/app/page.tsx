@@ -32,7 +32,13 @@ export default function Home() {
                   >
                     Packaging Hub
                   </Text>
-                  <Text fw={400} fz={12} maw={400} c={"var(--ph-plain-white)"} ta={"center"}>
+                  <Text
+                    fw={400}
+                    fz={{ base: 12, md: 16 }}
+                    maw={400}
+                    c={"var(--ph-plain-white)"}
+                    ta={"center"}
+                  >
                     We believe in the power of a well-crafted packaging bags to enhance your
                     lifestyle. Explore our curated collection of premium bags that seamlessly blend
                     style, functionality, and durability.
@@ -54,7 +60,13 @@ export default function Home() {
             gap={{ base: 20, md: 60 }}
           >
             <Stack flex={1}>
-              <Text fw={400} fz={12} tt={"uppercase"} ta={"left"} c={"var(--ph-plain-black)"}>
+              <Text
+                fw={400}
+                fz={{ base: 12, md: 16 }}
+                tt={"uppercase"}
+                ta={"left"}
+                c={"var(--ph-plain-black)"}
+              >
                 Your Perfect Fit
               </Text>
               <Text
@@ -67,7 +79,7 @@ export default function Home() {
                 We believe in fashion that cares for the planet. Our commitment to sustainability
                 goes beyond creating stylish bags – it&apos;s about making a positive impact
               </Text>
-              <Text fz={12} fw={400} c={"var(--ph-black-shade)"} ta={"left"}>
+              <Text fz={{ base: 12, md: 16 }} fw={400} c={"var(--ph-black-shade)"} ta={"left"}>
                 Choosing the right size is crucial when it comes to bags. Use our comprehensive size
                 guide to ensure your bag is not only stylish but also perfectly suited to your
                 needs. From compact crossbodies to spacious totes, we&apos;ve got the right size for
@@ -109,7 +121,7 @@ export default function Home() {
                 Adventure collection is designed to keep up with your dynamic lifestyle, offering
                 durability without compromising on style.
               </Text>
-              <Text fz={12} fw={400} c={"var(--ph-black-shade)"} ta={"left"}>
+              <Text fz={{ base: 12, md: 16 }} fw={400} c={"var(--ph-black-shade)"} ta={"left"}>
                 Choosing the right size is crucial when it comes to bags. Use our comprehensive size
                 guide to ensure your bag is not only stylish but also perfectly suited to your
                 needs. From compact crossbodies to spacious totes, we&apos;ve got the right size for
@@ -157,7 +169,7 @@ export default function Home() {
                 you, Packaging Hub has the perfect bag for every occasion.
               </Text>
               <Box w={{ base: "100%", md: "50%" }}>
-                <Text fz={12} fw={400} c={"var(--ph-black-shade)"} ta={"left"}>
+                <Text fz={{ base: 12, md: 16 }} fw={400} c={"var(--ph-black-shade)"} ta={"left"}>
                   Discover our current best-sellers and customer favorites. Each product is a
                   testament to Packaging Hub&apos;s commitment to combining style, durability, and
                   functionality.
@@ -182,12 +194,18 @@ export default function Home() {
             >
               Why Choose Packaging Hub?
             </Text>
-            <Text fz={12} fw={400} c={"var(--ph-plain-black)"} ta={"left"} maw={600}>
+            <Text
+              fz={{ base: 12, md: 16 }}
+              fw={400}
+              c={"var(--ph-plain-black)"}
+              ta={"left"}
+              maw={600}
+            >
               Discover our current best-sellers and customer favorites. Each product is a testament
               to Packaging Hub&apos;s commitment to combining style, durability, and functionality.
             </Text>
             <Carousel
-              height={400}
+              height={450}
               slideSize={{ base: "50%", md: "33.333333%" }}
               align="start"
               slideGap={30}
@@ -206,10 +224,20 @@ export default function Home() {
                   >
                     <Image src={i.image.src} alt={i.title} h={180} w={180} fit="fill" />
                     <Box>
-                      <Text fz={16} fw={500} ta={"left"} c={"var(--ph-plain-black)"}>
+                      <Text
+                        fz={{ base: 12, md: 16 }}
+                        fw={500}
+                        ta={"left"}
+                        c={"var(--ph-plain-black)"}
+                      >
                         {i.title}
                       </Text>
-                      <Text fz={12} fw={400} ta={"left"} c={"var(--ph-black-shade)"}>
+                      <Text
+                        fz={{ base: 12, md: 16 }}
+                        fw={400}
+                        ta={"left"}
+                        c={"var(--ph-black-shade)"}
+                      >
                         {i.description}
                       </Text>
                     </Box>

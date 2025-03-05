@@ -22,7 +22,7 @@ export default function Header() {
           {links.map((link) => (
             <Text
               key={link.name}
-              fz={12}
+              fz={{ base: 12, md: 16 }}
               fw={400}
               component={Link}
               href={`/${link.href}`}
