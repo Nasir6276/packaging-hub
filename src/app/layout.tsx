@@ -6,7 +6,6 @@ import localFont from "next/font/local"
 import {
   AppShell,
   AppShellHeader,
-  Container,
   AppShellMain,
   mantineHtmlProps,
   MantineProvider,
@@ -87,10 +86,8 @@ export default function RootLayout({
               main: { paddingBottom: 0 },
             }}
           >
-            <AppShellHeader withBorder={false} bg={"var(--ph-dark-purple)"}>
-              <Container size={1440} p={0} mb={0} h={"100%"}>
-                <Header />
-              </Container>
+            <AppShellHeader withBorder={false} bg={"var(--ph-dark-purple)"} px={0}>
+              <Header />
             </AppShellHeader>
 
             <AppShellMain px={0}>

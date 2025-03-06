@@ -11,8 +11,11 @@ import blackBox from "@/assets/images/boxBlack.png"
 import womanWithBlackBox from "@/assets/images/womanHoldingBoxBlack.png"
 import womanWithToteBag from "@/assets/images/womanHoldingToteBagBlack.png"
 import blackPaperBag from "@/assets/images/blackPaperbag.png"
+import purpleBag from "@/assets/images/purpleBag.png"
 import { Carousel } from "@mantine/carousel"
 import classes from "./demo.module.css"
+import { LuSquareArrowRight } from "react-icons/lu"
+import { LuSquareArrowLeft } from "react-icons/lu"
 
 export default function Home() {
   return (
@@ -93,7 +96,7 @@ export default function Home() {
         </Container>
       </Box>
 
-      <Box bg={"var(--ph-plain-white)"} py={{ base: 30, md: 50 }}>
+      <Box bg={"var(--ph-plain-white)"} py={{ base: 50, md: 100 }}>
         <Container size={1200} px={{ base: 24, xl: 0 }}>
           <Flex
             direction={{ base: "column-reverse", md: "row" }}
@@ -133,7 +136,7 @@ export default function Home() {
         </Container>
       </Box>
 
-      <Box bg={"var(--ph-dark-purple)"} pt={{ base: 30, md: 50 }}>
+      <Box bg={"var(--ph-dark-purple)"} pt={{ base: 50, md: 100 }}>
         <Container size={1200} px={{ base: 24, xl: 0 }}>
           <Flex
             direction={{ base: "column-reverse", md: "row" }}
@@ -168,7 +171,7 @@ export default function Home() {
                 Whether you&apos;re seeking classic sophistication, urban chic, or a companion for
                 you, Packaging Hub has the perfect bag for every occasion.
               </Text>
-              <Box w={{ base: "100%", md: "50%" }}>
+              <Box w={{ base: "100%", md: "70%" }}>
                 <Text fz={{ base: 12, md: 16 }} fw={400} c={"var(--ph-black-shade)"} ta={"left"}>
                   Discover our current best-sellers and customer favorites. Each product is a
                   testament to Packaging Hub&apos;s commitment to combining style, durability, and
@@ -184,7 +187,7 @@ export default function Home() {
       <Box bg={"var(--ph-black-shade-200)"} py={{ base: 50, md: 100 }}>
         <Container size={1200} px={{ base: 24, xl: 0 }}>
           <Stack gap={20}>
-            <Image src={flatLogo.src} alt="fllatlogo" h={20} w={20} />
+            <Image src={flatLogo.src} alt="flatlogo" h={20} w={20} />
             <Text
               fz={{ base: 38, md: 44 }}
               fw={{ base: 500, md: 700 }}
@@ -205,7 +208,7 @@ export default function Home() {
               to Packaging Hub&apos;s commitment to combining style, durability, and functionality.
             </Text>
             <Carousel
-              height={450}
+              height={400}
               slideSize={{ base: "50%", md: "33.333333%" }}
               align="start"
               slideGap={30}
@@ -246,6 +249,61 @@ export default function Home() {
               ))}
             </Carousel>
           </Stack>
+        </Container>
+      </Box>
+
+      <Box bg={"var(--ph-plain-white)"} py={{ base: 50, md: 100 }}>
+        <Container size={1200} px={{ base: 24, xl: 0 }}>
+          <Text fz={{ base: 12, md: 16 }} fw={400} c={"var(--ph-plain-black)"} ta={"center"}>
+            Urban Explorer & Adventure Seeker
+          </Text>
+          <Text
+            fz={{ base: 38, md: 44 }}
+            fw={{ base: 500, md: 700 }}
+            c={"var(--ph-plain-black)"}
+            ta={"center"}
+            lh={{ base: "38px", md: "44px" }}
+            // maw={500}
+          >
+            Explore our carefully <br /> curated collections
+          </Text>
+          <Flex
+            direction={{ base: "column", md: "row" }}
+            gap={20}
+            align={{ base: "flex-start", md: "flex-end" }}
+          >
+            <Flex
+              flex={3}
+              direction={{ base: "column-reverse", md: "row" }}
+              align={"flex-end"}
+              gap={15}
+              mt={{ base: 30, md: 50 }}
+              className="slide"
+            >
+              <Text
+                fz={{ base: 12, md: 16 }}
+                fw={400}
+                c={"var(--ph-plain-black)"}
+                ta={"left"}
+                flex={1}
+                pb={{ base: 0, md: 20 }}
+              >
+                Explore our collections, embrace quality craftsmanship, and make a statement with
+                Packaging Hub. Your perfect bag is just a click away.
+              </Text>
+              <Image alt="purple bag" src={purpleBag.src} h={450} flex={1} w={"100%"} />
+            </Flex>
+            <Flex
+              flex={1}
+              align={{ base: "flex-start", md: "center" }}
+              justify={"center"}
+              gap={10}
+              pb={{ base: 0, md: 20 }}
+            >
+              <LuSquareArrowLeft size={40} cursor={"pointer"} />
+              <LuSquareArrowRight size={40} cursor={"pointer"} />
+            </Flex>
+          </Flex>
         </Container>
       </Box>
     </>

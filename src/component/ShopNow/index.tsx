@@ -17,7 +17,7 @@ export default function ShopNow({ bgColor, textColor }: ShopNowProps) {
         fz={{ base: 12, md: 16 }}
         fw={400}
         size="md"
-        w={100}
+        w={150}
       >
         Shop Now
       </Button>
