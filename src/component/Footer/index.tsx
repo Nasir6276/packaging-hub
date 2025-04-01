@@ -1,16 +1,25 @@
-import { Box, Container, Divider, Flex, Group, Image, Stack, Text } from "@mantine/core"
-import React from "react"
-import coloredLogo from "@/assets/logos/LOGO HORIZONTAL PRIMARY.svg"
-import Link from "next/link"
-import { FaFacebook } from "react-icons/fa"
-import { FaSquareXTwitter } from "react-icons/fa6"
-import { FaInstagramSquare } from "react-icons/fa"
-import { FaLinkedin } from "react-icons/fa"
-import { IoLogoYoutube } from "react-icons/io5"
+import {
+  Box,
+  Container,
+  Divider,
+  Flex,
+  Group,
+  Image,
+  Stack,
+  Text,
+} from "@mantine/core";
+import React from "react";
+import coloredLogo from "@/assets/logos/LOGO HORIZONTAL PRIMARY.svg";
+import Link from "next/link";
+import { FaFacebook } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
+import { FaInstagramSquare } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { IoLogoYoutube } from "react-icons/io5";
 
 export default function Footer() {
   return (
-    <Box bg={"var(--plain-white)"} py={53}>
+    <Box bg={"var(--ph-plain-white)"} py={53}>
       <Container size={1200} px={0}>
         <Flex
           direction={{ base: "column", md: "row" }}
@@ -23,10 +32,15 @@ export default function Footer() {
             <Link href={"/"}>
               <Image src={coloredLogo.src} alt="logo" h={25} />
             </Link>
-            <Text maw={400} c={"var(--ph-plain-black)"} fz={{ base: 12, md: 16 }} fw={400}>
-              We believe in the power of a well-crafted bag to enhance your lifestyle. Explore our
-              curated collection of premium bags that seamlessly blend style, functionality, and
-              durability.
+            <Text
+              maw={400}
+              c={"var(--ph-plain-black)"}
+              fz={{ base: 12, md: 16 }}
+              fw={400}
+            >
+              We believe in the power of a well-crafted bag to enhance your
+              lifestyle. Explore our curated collection of premium bags that
+              seamlessly blend style, functionality, and durability.
             </Text>
           </Flex>
 
@@ -50,7 +64,11 @@ export default function Footer() {
             align={{ base: "flex-start", md: "center" }}
             gap={20}
           >
-            <Text fz={{ base: 12, md: 16 }} fw={400}>
+            <Text
+              fz={{ base: 12, md: 16 }}
+              fw={400}
+              c={"var(--ph-plain-black)"}
+            >
               &copy;2025 PackagingHub. All right reserved.
             </Text>
 
@@ -65,63 +83,73 @@ export default function Footer() {
         </Stack>
       </Container>
     </Box>
-  )
+  );
 }
 
 const socials = [
   {
     href: "",
-    icon: <FaFacebook size={20} />,
+    icon: <FaFacebook size={20} color={"var(--ph-plain-black)"} />,
   },
   {
     href: "",
-    icon: <FaSquareXTwitter size={20} />,
+    icon: <FaSquareXTwitter size={20} color={"var(--ph-plain-black)"} />,
   },
   {
     href: "",
-    icon: <FaInstagramSquare size={20} />,
+    icon: <FaInstagramSquare size={20} color={"var(--ph-plain-black)"} />,
   },
   {
     href: "",
-    icon: <FaLinkedin size={20} />,
+    icon: <FaLinkedin size={20} color={"var(--ph-plain-black)"} />,
   },
   {
     href: "",
-    icon: <IoLogoYoutube size={20} />,
+    icon: <IoLogoYoutube size={20} color={"var(--ph-plain-black)"} />,
   },
-]
+];
 
 const company = {
   bags: "/bags",
   accessories: "/accessories",
   blogs: "/blogs",
   contact: "/contact",
-}
+};
 
 const services = {
   business: "/business",
   modification: "/modification",
   insurance: "/insurance",
   warranty: "/warranty",
-}
+};
 
 const legal = {
   policy: "/policy",
   terms: "/terms",
   cookies: "/cookies",
   sitemap: "/sitemap",
-}
+};
 
 interface QuickLinkProps {
-  title: string
-  links: Record<string, string>
-  isBlankTarget?: boolean
+  title: string;
+  links: Record<string, string>;
+  isBlankTarget?: boolean;
 }
 
-const QuickLinks = ({ title, links, isBlankTarget = false }: QuickLinkProps) => {
+const QuickLinks = ({
+  title,
+  links,
+  isBlankTarget = false,
+}: QuickLinkProps) => {
   return (
     <Box>
-      <Text fz={{ base: 12, md: 16 }} fw={500} c={"var(--ph-plain-black)"} tt={"uppercase"} mb={16}>
+      <Text
+        fz={{ base: 12, md: 16 }}
+        fw={500}
+        c={"var(--ph-plain-black)"}
+        tt={"uppercase"}
+        mb={16}
+      >
         {title}
       </Text>
 
@@ -143,5 +171,5 @@ const QuickLinks = ({ title, links, isBlankTarget = false }: QuickLinkProps) => 
         </Stack>
       ))}
     </Box>
-  )
-}
+  );
+};
