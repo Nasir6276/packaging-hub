@@ -49,46 +49,46 @@ export default function Home() {
         >
           <Flex align={"center"} justify={"center"} h={"90%"}>
             <Box maw={600}>
-              {/* <BackgroundImage
+              <BackgroundImage
                 src={heroImage.src}
                 w={{ base: 500, md: 700 }}
                 h={500}
-              > */}
-              <Flex
-                align={"center"}
-                justify={"center"}
-                h={"100%"}
-                p={"md"}
-                w={{ base: 500, md: 700 }}
-                direction={"column"}
               >
-                <Text
-                  fw={800}
-                  fz={{ base: 50, md: 80 }}
-                  tt={"uppercase"}
-                  c={"var(--ph-plain-white)"}
-                  ta={"center"}
+                <Flex
+                  align={"center"}
+                  justify={"center"}
+                  h={"100%"}
+                  p={"md"}
+                  w={{ base: 500, md: 700 }}
+                  direction={"column"}
                 >
-                  Packaging Hub
-                </Text>
-                <Text
-                  fw={400}
-                  fz={{ base: 12, md: 16 }}
-                  maw={500}
-                  c={"var(--ph-plain-white)"}
-                  ta={"center"}
-                >
-                  We believe in the power of a well-crafted packaging bags to
-                  enhance your lifestyle. Explore our curated collection of
-                  premium bags that seamlessly blend style, functionality, and
-                  durability.
-                </Text>
-                <ShopNow
-                  bgColor="var(--ph-light-purple)"
-                  textColor="var(--ph-plain-white)"
-                />
-              </Flex>
-              {/* </BackgroundImage> */}
+                  <Text
+                    fw={800}
+                    fz={{ base: 50, md: 80 }}
+                    tt={"uppercase"}
+                    c={"var(--ph-plain-white)"}
+                    ta={"center"}
+                  >
+                    Packaging Hub
+                  </Text>
+                  <Text
+                    fw={400}
+                    fz={{ base: 12, md: 16 }}
+                    maw={500}
+                    c={"var(--ph-plain-white)"}
+                    ta={"center"}
+                  >
+                    We believe in the power of a well-crafted packaging bags to
+                    enhance your lifestyle. Explore our curated collection of
+                    premium bags that seamlessly blend style, functionality, and
+                    durability.
+                  </Text>
+                  <ShopNow
+                    bgColor="var(--ph-light-purple)"
+                    textColor="var(--ph-plain-white)"
+                  />
+                </Flex>
+              </BackgroundImage>
             </Box>
           </Flex>
         </Container>
