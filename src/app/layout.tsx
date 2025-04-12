@@ -1,8 +1,8 @@
-import type { Metadata } from "next"
-import "../styles/global.scss"
-import "@mantine/core/styles.css"
-import "@mantine/carousel/styles.css"
-import localFont from "next/font/local"
+import type { Metadata } from "next";
+import "../styles/global.scss";
+import "@mantine/core/styles.css";
+import "@mantine/carousel/styles.css";
+import localFont from "next/font/local";
 import {
   AppShell,
   AppShellHeader,
@@ -10,10 +10,10 @@ import {
   mantineHtmlProps,
   MantineProvider,
   MantineThemeOverride,
-} from "@mantine/core"
-import { colors } from "@/constant/themes"
-import Header from "@/component/Header"
-import Footer from "@/component/Footer"
+} from "@mantine/core";
+import { colors } from "@/constant/themes";
+import Header from "@/component/Header";
+import Footer from "@/component/Footer";
 
 const interTight = localFont({
   src: [
@@ -48,7 +48,7 @@ const interTight = localFont({
       style: "normal",
     },
   ],
-})
+});
 
 const theme: MantineThemeOverride = {
   fontFamily: interTight.className,
@@ -61,17 +61,17 @@ const theme: MantineThemeOverride = {
   primaryColor: "primary",
   primaryShade: 0,
   defaultRadius: "xs",
-}
+};
 
 export const metadata: Metadata = {
   title: "Packaging Hub",
   description: "Everything Na Packaging",
-}
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en" {...mantineHtmlProps}>
@@ -82,11 +82,18 @@ export default function RootLayout({
             header={{ height: 80 }}
             // padding="xl"
             styles={{
-              header: { backgroundColor: "var(--ph-dark-purple)", height: "80px" },
+              header: {
+                backgroundColor: "var(--ph-dark-purple)",
+                height: "80px",
+              },
               main: { paddingBottom: 0 },
             }}
           >
-            <AppShellHeader withBorder={false} bg={"var(--ph-dark-purple)"} px={0}>
+            <AppShellHeader
+              withBorder={false}
+              bg={"var(--ph-dark-purple)"}
+              px={0}
+            >
               <Header />
             </AppShellHeader>
 
@@ -98,5 +105,5 @@ export default function RootLayout({
         </MantineProvider>
       </body>
     </html>
-  )
+  );
 }

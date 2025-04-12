@@ -15,7 +15,7 @@ import heroImage from "@/assets/images/scracth.png";
 import ShopNow from "@/component/ShopNow";
 import WomanWithBag from "@/assets/images/Woman carrying totebag mockup.jpg";
 import officeSpace from "@/assets/images/Office Space with Posters Mockup.jpg";
-import mallPoster from "@/assets/images/MallPoster.jpg";
+// import mallPoster from "@/assets/images/MallPoster.jpg";
 import paperBag from "@/assets/images/paperbag.png";
 import flatLogo from "@/assets/logos/LOGO ISOLATED PRIMARY.png";
 import blackBox from "@/assets/images/boxBlack.png";
@@ -23,10 +23,12 @@ import womanWithBlackBox from "@/assets/images/womanHoldingBoxBlack.png";
 import womanWithToteBag from "@/assets/images/womanHoldingToteBagBlack.png";
 import blackPaperBag from "@/assets/images/blackPaperbag.png";
 import purpleBag from "@/assets/images/purpleBag.png";
+import NewsLetterBg from "@/assets/images/Rectangle.png";
 import { Carousel } from "@mantine/carousel";
 import classes from "./demo.module.css";
 import { LuSquareArrowRight } from "react-icons/lu";
 import { LuSquareArrowLeft } from "react-icons/lu";
+import FeaturedProducts from "@/component/Featuredproducts";
 
 export default function Home() {
   return (
@@ -73,8 +75,8 @@ export default function Home() {
                   </Text>
                   <Text
                     fw={400}
-                    fz={{ base: 12, md: 16 }}
-                    maw={500}
+                    fz={16}
+                    maw={400}
                     c={"var(--ph-plain-white)"}
                     ta={"center"}
                   >
@@ -94,6 +96,8 @@ export default function Home() {
         </Container>
       </Box>
 
+      <Box bg={"var(--ph-plain-white)"} py={100}></Box>
+
       <Box bg={"var(--ph-plain-white)"} py={100}>
         <Container size={1200} px={{ base: 24, xl: 0 }}>
           <Flex
@@ -105,7 +109,7 @@ export default function Home() {
             <Stack flex={1}>
               <Text
                 fw={400}
-                fz={{ base: 12, md: 16 }}
+                fz={16}
                 tt={"uppercase"}
                 ta={"left"}
                 c={"var(--ph-plain-black)"}
@@ -123,12 +127,7 @@ export default function Home() {
                 to sustainability goes beyond creating stylish bags – it&apos;s
                 about making a positive impact
               </Text>
-              <Text
-                fz={{ base: 12, md: 16 }}
-                fw={400}
-                c={"var(--ph-black-shade)"}
-                ta={"left"}
-              >
+              <Text fz={16} fw={400} c={"var(--ph-black-shade)"} ta={"left"}>
                 Choosing the right size is crucial when it comes to bags. Use
                 our comprehensive size guide to ensure your bag is not only
                 stylish but also perfectly suited to your needs. From compact
@@ -181,12 +180,7 @@ export default function Home() {
                 Adventure collection is designed to keep up with your dynamic
                 lifestyle, offering durability without compromising on style.
               </Text>
-              <Text
-                fz={{ base: 12, md: 16 }}
-                fw={400}
-                c={"var(--ph-black-shade)"}
-                ta={"left"}
-              >
+              <Text fz={16} fw={400} c={"var(--ph-black-shade)"} ta={"left"}>
                 Choosing the right size is crucial when it comes to bags. Use
                 our comprehensive size guide to ensure your bag is not only
                 stylish but also perfectly suited to your needs. From compact
@@ -202,7 +196,7 @@ export default function Home() {
         </Container>
       </Box>
 
-      <Box bg={"var(--ph-dark-purple)"} pt={{ base: 50, md: 100 }}>
+      <Box bg={"var(--ph-light-purple)"} pt={{ base: 50, md: 100 }}>
         <Container size={1200} px={{ base: 24, xl: 0 }}>
           <Flex
             direction={{ base: "column-reverse", md: "row" }}
@@ -244,12 +238,7 @@ export default function Home() {
                 every occasion.
               </Text>
               <Box w={{ base: "100%", md: "70%" }}>
-                <Text
-                  fz={{ base: 12, md: 16 }}
-                  fw={400}
-                  c={"var(--ph-black-shade)"}
-                  ta={"left"}
-                >
+                <Text fz={16} fw={400} c={"var(--ph-plain-white)"} ta={"left"}>
                   Discover our current best-sellers and customer favorites. Each
                   product is a testament to Packaging Hub&apos;s commitment to
                   combining style, durability, and functionality.
@@ -278,7 +267,7 @@ export default function Home() {
               Why Choose Packaging Hub?
             </Text>
             <Text
-              fz={{ base: 12, md: 16 }}
+              fz={16}
               fw={400}
               c={"var(--ph-plain-black)"}
               ta={"left"}
@@ -315,7 +304,7 @@ export default function Home() {
                     />
                     <Box>
                       <Text
-                        fz={{ base: 12, md: 16 }}
+                        fz={16}
                         fw={500}
                         ta={"left"}
                         c={"var(--ph-plain-black)"}
@@ -323,7 +312,7 @@ export default function Home() {
                         {i.title}
                       </Text>
                       <Text
-                        fz={{ base: 12, md: 16 }}
+                        fz={16}
                         fw={400}
                         ta={"left"}
                         c={"var(--ph-black-shade)"}
@@ -341,12 +330,7 @@ export default function Home() {
 
       <Box bg={"var(--ph-plain-white)"} py={{ base: 50, md: 100 }}>
         <Container size={1200} px={{ base: 24, xl: 0 }}>
-          <Text
-            fz={{ base: 12, md: 16 }}
-            fw={400}
-            c={"var(--ph-plain-black)"}
-            ta={"center"}
-          >
+          <Text fz={16} fw={400} c={"var(--ph-plain-black)"} ta={"center"}>
             Urban Explorer & Adventure Seeker
           </Text>
           <Text
@@ -373,7 +357,7 @@ export default function Home() {
               className="slide"
             >
               <Text
-                fz={{ base: 12, md: 16 }}
+                fz={16}
                 fw={400}
                 c={"var(--ph-plain-black)"}
                 ta={"left"}
@@ -406,41 +390,71 @@ export default function Home() {
         </Container>
       </Box>
 
-      <Box bg={"var(--ph-plain-white)"} py={{ base: 50, md: 100 }}>
+      <FeaturedProducts />
+
+      <Box bg={"var(--ph-plain-white)"} py={{ base: 50, md: 100 }} px={0}>
         <Container size={1200} px={0}>
           <BackgroundImage
-            src={mallPoster.src}
+            src={NewsLetterBg.src}
             mih={500}
             w={"100%"}
             px={{ base: 24, xl: 100 }}
             py={{ base: 50, md: 100 }}
           >
-            <Stack gap={20} w={{ base: "100%", md: "50%" }}>
+            <Flex
+              gap={20}
+              w={"100%"}
+              direction={"column"}
+              align={{ base: "flex-start", md: "flex-end" }}
+            >
               <Text
                 fz={{ base: 38, md: 44 }}
                 fw={{ base: 500, md: 800 }}
                 c={"var(--ph-plain-white)"}
                 ta={"left"}
+                w={{ base: "100%", md: "50%" }}
+                lh={"60px"}
               >
                 Join the Packaging Hub Subscribe to Our Newsletter
               </Text>
               <Text
-                fz={{ base: 12, md: 16 }}
+                fz={16}
                 fw={400}
-                // c={"var(--ph-plain-White)"}
                 c={"#fff"}
                 ta={"left"}
-                w={{ base: "100%", md: "70%" }}
+                w={{ base: "100%", md: "50%" }}
               >
                 Be the first to know about new arrivals, exclusive promotions,
                 and the latest trends in the world of bags. Sign up for our
                 newsletter and stay connected with the Packaging Hub lifestyle.
               </Text>
-              <Flex>
-                <TextInput placeholder="email" />
-                <Button>Submit</Button>
+              <Flex
+                align={"flex-start"}
+                w={{ base: "100%", md: "50%" }}
+                gap={10}
+              >
+                <TextInput
+                  placeholder="Email Address"
+                  flex={1}
+                  size="lg"
+                  radius={0}
+                  styles={{
+                    input: {
+                      backgroundColor: "transparent",
+                      color: "#fff",
+                      border: "1px solid #fff",
+                      "::placeholder": {
+                        color: "#fff",
+                        opacity: 1, // optional, ensures full opacity
+                      },
+                    },
+                  }}
+                />
+                <Button radius={0} size="lg">
+                  Submit
+                </Button>
               </Flex>
-            </Stack>
+            </Flex>
           </BackgroundImage>
         </Container>
       </Box>

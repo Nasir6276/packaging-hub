@@ -28,16 +28,11 @@ export default function Footer() {
           gap={40}
           px={{ base: 24, xl: 0 }}
         >
-          <Flex direction={"column"} align={"flex-start"} gap={10}>
+          <Flex direction={"column"} align={"flex-start"} gap={10} flex={1}>
             <Link href={"/"}>
               <Image src={coloredLogo.src} alt="logo" h={25} />
             </Link>
-            <Text
-              maw={400}
-              c={"var(--ph-plain-black)"}
-              fz={{ base: 12, md: 16 }}
-              fw={400}
-            >
+            <Text maw={400} c={"var(--ph-plain-black)"} fz={16} fw={400}>
               We believe in the power of a well-crafted bag to enhance your
               lifestyle. Explore our curated collection of premium bags that
               seamlessly blend style, functionality, and durability.
@@ -48,6 +43,7 @@ export default function Footer() {
             direction={{ base: "column", md: "row" }}
             justify={{ base: "flex-start", md: "space-between" }}
             gap={60}
+            flex={1.2}
           >
             <QuickLinks title="Company" links={company} isBlankTarget />
             <QuickLinks title="Services" links={services} />
@@ -64,11 +60,7 @@ export default function Footer() {
             align={{ base: "flex-start", md: "center" }}
             gap={20}
           >
-            <Text
-              fz={{ base: 12, md: 16 }}
-              fw={400}
-              c={"var(--ph-plain-black)"}
-            >
+            <Text fz={16} fw={400} c={"var(--ph-plain-black)"}>
               &copy;2025 PackagingHub. All right reserved.
             </Text>
 
@@ -144,7 +136,7 @@ const QuickLinks = ({
   return (
     <Box>
       <Text
-        fz={{ base: 12, md: 16 }}
+        fz={16}
         fw={500}
         c={"var(--ph-plain-black)"}
         tt={"uppercase"}
@@ -163,7 +155,7 @@ const QuickLinks = ({
             target={isBlankTarget ? "_blank" : "_self"}
             tt={"capitalize"}
             c={"var(--ph-plain-black)"}
-            fz={{ base: 12, md: 16 }}
+            fz={16}
             fw={400}
           >
             {title}
