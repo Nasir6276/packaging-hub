@@ -18,7 +18,6 @@ import ShopNow from "@/component/ShopNow";
 import WomanWithBag from "@/assets/images/Woman carrying totebag mockup.jpg";
 import officeSpace from "@/assets/images/Office Space with Posters Mockup.jpg";
 // import mallPoster from "@/assets/images/MallPoster.jpg";
-import paperBag from "@/assets/images/paperbag.png";
 import flatLogo from "@/assets/logos/LOGO ISOLATED PRIMARY.png";
 import blackBox from "@/assets/images/boxBlack.png";
 import womanWithBlackBox from "@/assets/images/womanHoldingBoxBlack.png";
@@ -35,10 +34,13 @@ import classes from "./demo.module.css";
 import { LuSquareArrowRight } from "react-icons/lu";
 import { LuSquareArrowLeft } from "react-icons/lu";
 import FeaturedProducts from "@/component/Featuredproducts";
+import GridSection from "@/component/GridSection";
+import OrderSteps from "@/component/OrderSteps";
 
 export default function Home() {
   return (
     <>
+      {/* MAIN */}
       <Box
         bg={"var(--ph-dark-purple)"}
         h={"100vh"}
@@ -102,6 +104,7 @@ export default function Home() {
         </Container>
       </Box>
 
+      {/* SERVICES */}
       <Box bg={"var(--ph-plain-white)"} py={100}>
         <Container size={1200} px={{ base: 24, xl: 0 }}>
           <Group w={"100%"}>
@@ -132,9 +135,15 @@ export default function Home() {
                       align={"center"}
                       justify={"center"}
                       direction={"column"}
-                      gap={20}
+                      gap={10}
                     >
-                      <Image alt="image" src={i.image.src} w={100} h={100} />
+                      <Image
+                        alt="image"
+                        src={i.image.src}
+                        w={100}
+                        h={100}
+                        mb={10}
+                      />
                       <Text
                         fz={18}
                         fw={500}
@@ -159,6 +168,9 @@ export default function Home() {
           </Group>
         </Container>
       </Box>
+
+      {/* Grid Section */}
+      <GridSection />
 
       <Box bg={"var(--ph-plain-white)"} py={100}>
         <Container size={1200} px={{ base: 24, xl: 0 }}>
@@ -258,62 +270,8 @@ export default function Home() {
         </Container>
       </Box>
 
-      <Box bg={"var(--ph-light-purple)"} pt={{ base: 50, md: 100 }}>
-        <Container size={1200} px={{ base: 24, xl: 0 }}>
-          <Flex
-            direction={{ base: "column-reverse", md: "row" }}
-            align={{ base: "flex-start", md: "center" }}
-            justify={{ base: "center", md: "space-between" }}
-            gap={40}
-          >
-            <Flex
-              flex={1.3}
-              mih={{ base: 350, md: 500 }}
-              w={"100%"}
-              align={"center"}
-              justify={"center"}
-            >
-              <Image
-                src={paperBag.src}
-                h={"100%"}
-                w={"100%"}
-                alt="womanWithToteBag"
-              />
-            </Flex>
-            <Flex
-              direction={"column"}
-              align={"flex-end"}
-              flex={1}
-              gap={"md"}
-              justify={"space-around"}
-              mih={{ base: 350, md: 500 }}
-            >
-              <Text
-                fz={{ base: 38, md: 44 }}
-                fw={{ base: 500, md: 700 }}
-                c={"var(--ph-plain-white)"}
-                ta={"left"}
-                lh={{ base: "38px", md: "44px" }}
-              >
-                Whether you&apos;re seeking classic sophistication, urban chic,
-                or a companion for you, Packaging Hub has the perfect bag for
-                every occasion.
-              </Text>
-              <Box w={{ base: "100%", md: "70%" }}>
-                <Text fz={16} fw={400} c={"var(--ph-plain-white)"} ta={"left"}>
-                  Discover our current best-sellers and customer favorites. Each
-                  product is a testament to Packaging Hub&apos;s commitment to
-                  combining style, durability, and functionality.
-                </Text>
-                <ShopNow
-                  bgColor="var(--ph-plain-white)"
-                  textColor="var(--ph-plain-black)"
-                />
-              </Box>
-            </Flex>
-          </Flex>
-        </Container>
-      </Box>
+      {/* STEPS */}
+      <OrderSteps />
 
       <Box bg={"var(--ph-black-shade-200)"} py={{ base: 50, md: 100 }}>
         <Container size={1200} px={{ base: 24, xl: 0 }}>
