@@ -6,6 +6,8 @@ import {
   Button,
   Container,
   Flex,
+  Grid,
+  Group,
   Image,
   Stack,
   Text,
@@ -23,6 +25,10 @@ import womanWithBlackBox from "@/assets/images/womanHoldingBoxBlack.png";
 import womanWithToteBag from "@/assets/images/womanHoldingToteBagBlack.png";
 import blackPaperBag from "@/assets/images/blackPaperbag.png";
 import purpleBag from "@/assets/images/purpleBag.png";
+import box from "@/assets/images/box (1).png";
+import box2 from "@/assets/images/box (2).png";
+import scroll from "@/assets/images/scroll.png";
+import eco from "@/assets/images/eco-packaging.png";
 import NewsLetterBg from "@/assets/images/Rectangle.png";
 import { Carousel } from "@mantine/carousel";
 import classes from "./demo.module.css";
@@ -96,7 +102,63 @@ export default function Home() {
         </Container>
       </Box>
 
-      <Box bg={"var(--ph-plain-white)"} py={100}></Box>
+      <Box bg={"var(--ph-plain-white)"} py={100}>
+        <Container size={1200} px={{ base: 24, xl: 0 }}>
+          <Group w={"100%"}>
+            <Flex
+              direction={"column"}
+              align={"center"}
+              justify={"center"}
+              w={"100%"}
+              gap={20}
+            >
+              <Text
+                fz={{ base: 38, md: 44 }}
+                fw={{ base: 500, md: 700 }}
+                c={"var(--ph-plain-black)"}
+                ta={"center"}
+                lh={{ base: "38px", md: "44px" }}
+              >
+                Custom Packaging Boxes With Excellent Services
+              </Text>
+              <Text fz={16} fw={400} c={"var(--ph-black-shade)"} ta={"center"}>
+                A packaging company that designs and manufactures high-quality
+                boxes at reasonable prices is available to serve you.
+              </Text>
+              <Grid gutter={"md"} grow>
+                {aboutGrid.map((i) => (
+                  <Grid.Col span={{ sm: 4, md: 2.4 }} key={i.title} my={10}>
+                    <Flex
+                      align={"center"}
+                      justify={"center"}
+                      direction={"column"}
+                      gap={20}
+                    >
+                      <Image alt="image" src={i.image.src} w={100} h={100} />
+                      <Text
+                        fz={18}
+                        fw={500}
+                        c={"var(--ph-plain-black)"}
+                        ta={"center"}
+                      >
+                        {i.title}
+                      </Text>
+                      <Text
+                        fz={16}
+                        fw={400}
+                        c={"var(--ph-black-shade)"}
+                        ta={"center"}
+                      >
+                        {i.desc}
+                      </Text>
+                    </Flex>
+                  </Grid.Col>
+                ))}
+              </Grid>
+            </Flex>
+          </Group>
+        </Container>
+      </Box>
 
       <Box bg={"var(--ph-plain-white)"} py={100}>
         <Container size={1200} px={{ base: 24, xl: 0 }}>
@@ -486,5 +548,33 @@ const CarouselData = [
     description:
       "We're dedicated to sustainable practices, sourcing eco-friendly materials and crafting durable bags that minimize waste and promote long-term use.",
     image: womanWithToteBag,
+  },
+];
+
+const aboutGrid = [
+  {
+    image: box,
+    title: "Starting From 50 Boxes",
+    desc: "Orders start from as few as 50 boxes.",
+  },
+  {
+    image: scroll,
+    title: "Quickest Turnaround Time",
+    desc: "You do not have to wait for your custom packaging.",
+  },
+  {
+    image: box2,
+    title: "No Die & Plate Charges",
+    desc: "Save money on your custom boxes with no extra charges.",
+  },
+  {
+    image: eco,
+    title: "High Quality Offset Printing",
+    desc: "Expect only the highest quality printing services from Packaging Hub.",
+  },
+  {
+    image: box,
+    title: "Custom Design, Sizes & Style",
+    desc: "Order your custom-printed boxes in any style you need.",
   },
 ];
