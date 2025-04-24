@@ -15,7 +15,7 @@ import {
 } from "@mantine/core";
 import heroImage from "@/assets/images/scracth.png";
 import ShopNow from "@/component/ShopNow";
-import WomanWithBag from "@/assets/images/Woman carrying totebag mockup.jpg";
+import WomanWithBag from "@/assets/images/pinkBgBag.jpg";
 import officeSpace from "@/assets/images/Office Space with Posters Mockup.jpg";
 // import mallPoster from "@/assets/images/MallPoster.jpg";
 import flatLogo from "@/assets/logos/LOGO ISOLATED PRIMARY.png";
