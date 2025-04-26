@@ -32,6 +32,7 @@ import ShopNow from "../ShopNow";
 export default function Header() {
   const [open, { toggle, close }] = useDisclosure();
   const [productOpen, setProductOpen] = useState(false);
+  const [opened, setOpened] = useState(false);
   return (
     <Container
       size={1200}
@@ -68,39 +69,60 @@ export default function Header() {
                   {name}
                 </Text>
               ) : (
-                <Menu key={name}>
-                  <MenuTarget>
-                    <Group gap={5} style={{ cursor: "pointer" }}>
-                      <Text
-                        fz={16}
-                        fw={400}
-                        c="var(--ph-plain-white)"
-                        visibleFrom="md"
-                        tt="uppercase"
-                      >
-                        {name}
-                      </Text>
-                      <FaChevronDown color="var(--ph-plain-white)" size={18} />
-                    </Group>
-                  </MenuTarget>
-
-                  <MenuDropdown bg={"var(--ph-dark-purple)"}>
-                    {Object.entries(href).map(([childName, childHref]) => (
-                      <MenuItem key={childName}>
+                <Menu
+                  key={name}
+                  opened={opened}
+                  onClose={() => setOpened(false)}
+                  offset={4}
+                  withinPortal
+                  trigger="hover"
+                >
+                  <div
+                    onMouseEnter={() => setOpened(true)}
+                    onMouseLeave={() => setOpened(false)}
+                  >
+                    <MenuTarget>
+                      <Group gap={5} style={{ cursor: "pointer" }}>
                         <Text
                           fz={16}
                           fw={400}
-                          component={Link}
-                          href={`/${childHref}`}
                           c="var(--ph-plain-white)"
                           visibleFrom="md"
                           tt="uppercase"
                         >
-                          {childName}
+                          {name}
                         </Text>
-                      </MenuItem>
-                    ))}
-                  </MenuDropdown>
+                        <FaChevronDown
+                          color="var(--ph-plain-white)"
+                          size={18}
+                          style={{
+                            transform: opened
+                              ? "rotate(180deg)"
+                              : "rotate(0deg)",
+                            transition: "transform 0.5s",
+                          }}
+                        />
+                      </Group>
+                    </MenuTarget>
+
+                    <MenuDropdown bg={"var(--ph-dark-purple)"}>
+                      {Object.entries(href).map(([childName, childHref]) => (
+                        <MenuItem key={childName}>
+                          <Text
+                            fz={16}
+                            fw={400}
+                            component={Link}
+                            href={`/${childHref}`}
+                            c="var(--ph-plain-white)"
+                            visibleFrom="md"
+                            tt="uppercase"
+                          >
+                            {childName}
+                          </Text>
+                        </MenuItem>
+                      ))}
+                    </MenuDropdown>
+                  </div>
                 </Menu>
               )
             )}
@@ -146,6 +168,7 @@ export default function Header() {
               c="var(--ph-plain-white)"
               tt="uppercase"
               href={"/"}
+              onClick={close}
             >
               HOME
             </Text>
@@ -157,7 +180,8 @@ export default function Header() {
               component={Link}
               c="var(--ph-plain-white)"
               tt="uppercase"
-              href={"/"}
+              href={"/about"}
+              onClick={close}
             >
               ABOUT
             </Text>
@@ -167,21 +191,14 @@ export default function Header() {
             style={{ cursor: "pointer" }}
           >
             <Group gap={20}>
-              <Text
-                fz={16}
-                fw={400}
-                component={Link}
-                c="var(--ph-plain-white)"
-                tt="uppercase"
-                href={"/"}
-              >
+              <Text fz={16} fw={400} c="var(--ph-plain-white)" tt="uppercase">
                 OUR PACKAGES
               </Text>
               <FaChevronDown
                 size={16}
                 style={{
                   transform: productOpen ? "rotate(180deg)" : "rotate(0deg)",
-                  transition: "transform 0.2s",
+                  transition: "transform 0.5s",
                 }}
               />
             </Group>
@@ -194,7 +211,8 @@ export default function Header() {
                     component={Link}
                     c="var(--ph-plain-white)"
                     tt="uppercase"
-                    href={"/"}
+                    href={"/cbd-boxes"}
+                    onClick={close}
                   >
                     CBD Boxes
                   </Text>
@@ -206,7 +224,8 @@ export default function Header() {
                     component={Link}
                     c="var(--ph-plain-white)"
                     tt="uppercase"
-                    href={"/"}
+                    href={"/cosmetic-boxes"}
+                    onClick={close}
                   >
                     cosmetics boxes
                   </Text>
@@ -218,7 +237,8 @@ export default function Header() {
                     component={Link}
                     c="var(--ph-plain-white)"
                     tt="uppercase"
-                    href={"/"}
+                    href={"/custom-apparel-boxes"}
+                    onClick={close}
                   >
                     custom apparel boxes
                   </Text>
@@ -230,7 +250,8 @@ export default function Header() {
                     component={Link}
                     c="var(--ph-plain-white)"
                     tt="uppercase"
-                    href={"/"}
+                    href={"/food-boxes"}
+                    onClick={close}
                   >
                     food & beverages boxes
                   </Text>
@@ -242,7 +263,8 @@ export default function Header() {
                     component={Link}
                     c="var(--ph-plain-white)"
                     tt="uppercase"
-                    href={"/"}
+                    href={"/gift-boxes"}
+                    onClick={close}
                   >
                     gift boxes
                   </Text>
@@ -254,7 +276,8 @@ export default function Header() {
                     component={Link}
                     c="var(--ph-plain-white)"
                     tt="uppercase"
-                    href={"/"}
+                    href={"/retail-boxes"}
+                    onClick={close}
                   >
                     retail boxes
                   </Text>
@@ -266,7 +289,8 @@ export default function Header() {
                     component={Link}
                     c="var(--ph-plain-white)"
                     tt="uppercase"
-                    href={"/"}
+                    href={"/sport-boxes"}
+                    onClick={close}
                   >
                     sport packaging boxes
                   </Text>
@@ -278,7 +302,8 @@ export default function Header() {
                     component={Link}
                     c="var(--ph-plain-white)"
                     tt="uppercase"
-                    href={"/"}
+                    href={"/bakery-boxes"}
+                    onClick={close}
                   >
                     bakery boxes
                   </Text>
@@ -293,7 +318,8 @@ export default function Header() {
               component={Link}
               c="var(--ph-plain-white)"
               tt="uppercase"
-              href={"/"}
+              href={"/gallery"}
+              onClick={close}
             >
               GALLERY
             </Text>

@@ -1,16 +1,14 @@
 "use client";
 
-import { BackgroundImage, Box, Container, Flex, Text } from "@mantine/core";
 import React from "react";
-import court from "@/assets/images/court.jpg";
 import FeaturedProducts from "@/component/Featuredproducts";
 import GridSection from "@/component/GridSection";
+import Breadcrumb from "@/component/BreadCrumb";
 
 export default function Gallery() {
   return (
     <>
-      <Box bg={"var(--ph-plain-white)"}>
-        {/* <Container size={1200} h={"100%"} top={"100px"}> */}
+      {/* <Box bg={"var(--ph-plain-white)"}>
         <BackgroundImage src={court.src} w={"100%"} h={500} p={"50px"}>
           <Container size={1200} h={"100%"} top={"100px"}>
             <Flex
@@ -41,8 +39,8 @@ export default function Gallery() {
             </Flex>
           </Container>
         </BackgroundImage>
-        {/* </Container> */}
-      </Box>
+      </Box> */}
+      <Breadcrumb items={[{ title: "Gallery", href: "gallery" }]} />
 
       <GridSection />
 

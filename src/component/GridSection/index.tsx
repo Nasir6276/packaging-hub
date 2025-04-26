@@ -27,7 +27,7 @@ export default function GridSection() {
               lifestyle. Explore our curated collection of premium bags that
               seamlessly blend style, functionality, and durability.
             </Text>
-            <Grid mt={40}>
+            <Grid mt={40} gutter={{ base: 20, md: 40 }}>
               {grid.map((name, index) => (
                 <Grid.Col span={{ base: 6, md: 4, lg: 3 }} key={index}>
                   <Box

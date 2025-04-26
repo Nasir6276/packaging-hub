@@ -6,11 +6,12 @@ import React from "react";
 import MallPoster from "@/assets/images/MallPoster.jpg";
 import womanWithToteBag from "@/assets/images/pinkBgBag.jpg";
 import FeaturedProducts from "@/component/Featuredproducts";
+import Breadcrumb from "@/component/BreadCrumb";
 
 export default function About() {
   return (
     <>
-      <Box bg={"var(--ph-dark-purple)"}>
+      {/* <Box bg={"var(--ph-dark-purple)"}>
         <Container h={500} size={1200} p={50} top={"100px"}>
           <Flex
             direction={"column"}
@@ -39,10 +40,15 @@ export default function About() {
             </Text>
           </Flex>
         </Container>
-      </Box>
+      </Box> */}
+      <Breadcrumb items={[{ title: "About", href: "/about" }]} />
 
       <Box bg={"var(--ph-plain-white)"}>
-        <Container size={1200} p={{ base: 20, md: 50 }}>
+        <Container
+          size={1200}
+          py={{ base: 20, md: 50 }}
+          px={{ base: 20, md: 0 }}
+        >
           <Flex align={"center"} justify={"center"} h={"100%"} w={"100%"}>
             <Text fw={600} fz={50} c={"var(--ph-plain-black)"} ta={"left"}>
               At Packaging Hub, we want the right choice to be as easy as

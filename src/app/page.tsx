@@ -172,7 +172,7 @@ export default function Home() {
       {/* Grid Section */}
       <GridSection />
 
-      <Box bg={"var(--ph-plain-white)"} py={100}>
+      {/* <Box bg={"var(--ph-plain-white)"} py={100}>
         <Container size={1200} px={{ base: 24, xl: 0 }}>
           <Flex
             direction={{ base: "column", md: "row" }}
@@ -219,9 +219,9 @@ export default function Home() {
             </Flex>
           </Flex>
         </Container>
-      </Box>
+      </Box> */}
 
-      <Box bg={"var(--ph-plain-white)"} py={{ base: 50, md: 100 }}>
+      {/* <Box bg={"var(--ph-plain-white)"} py={{ base: 50, md: 100 }}>
         <Container size={1200} px={{ base: 24, xl: 0 }}>
           <Flex
             direction={{ base: "column-reverse", md: "row" }}
@@ -268,7 +268,7 @@ export default function Home() {
             </Stack>
           </Flex>
         </Container>
-      </Box>
+      </Box> */}
 
       {/* STEPS */}
       <OrderSteps />
