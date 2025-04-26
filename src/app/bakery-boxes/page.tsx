@@ -5,13 +5,10 @@ import FeaturedProducts from "@/component/Featuredproducts";
 import GridSection from "@/component/GridSection";
 import { Box, Container, Stack, Text } from "@mantine/core";
 import React from "react";
-
-export default function CosmeticBoxes() {
+export default function BakeryBoxes() {
   return (
     <>
-      <Breadcrumb
-        items={[{ title: "Cosmetic Boxes", href: "cosmetic-boxes" }]}
-      />
+      <Breadcrumb items={[{ title: "Bakery Boxes", href: "bakery-boxes" }]} />
 
       <GridSection />
 

@@ -9,37 +9,7 @@ import React from "react";
 export default function CBDBoxes() {
   return (
     <>
-      {/* <Box bg={"var(--ph-dark-purple)"}>
-        <Container h={500} size={1200} p={50} top={"100px"}>
-          <Flex
-            direction={"column"}
-            align={"flex-start"}
-            justify={"flex-end"}
-            h={"100%"}
-          >
-            <Text
-              fw={800}
-              fz={{ base: 50, md: 80 }}
-              c={"var(--ph-plain-white)"}
-              ta={"left"}
-            >
-              About
-            </Text>
-            <Text
-              fw={400}
-              fz={16}
-              maw={400}
-              c={"var(--ph-plain-white)"}
-              ta={"left"}
-            >
-              We believe in the power of a well-crafted bag to enhance your
-              lifestyle. Explore our curated collection of premium bags that
-              seamlessly blend style, functionality, and durability.
-            </Text>
-          </Flex>
-        </Container>
-      </Box> */}
-      <Breadcrumb items={items} />
+      <Breadcrumb items={[{ title: "CBD Boxes", href: "cbd-boxes" }]} />
 
       <GridSection />
 
@@ -133,5 +103,3 @@ export default function CBDBoxes() {
     </>
   );
 }
-
-const items = [{ title: "CBD Boxes", href: "cbd-boxes" }];

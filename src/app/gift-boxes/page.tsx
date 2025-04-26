@@ -6,12 +6,10 @@ import GridSection from "@/component/GridSection";
 import { Box, Container, Stack, Text } from "@mantine/core";
 import React from "react";
 
-export default function CosmeticBoxes() {
+export default function GiftBoxes() {
   return (
     <>
-      <Breadcrumb
-        items={[{ title: "Cosmetic Boxes", href: "cosmetic-boxes" }]}
-      />
+      <Breadcrumb items={[{ title: "Gift Boxes", href: "gift-boxes" }]} />
 
       <GridSection />
 

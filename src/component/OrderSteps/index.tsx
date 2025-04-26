@@ -22,6 +22,7 @@ export default function OrderSteps() {
             w={"100%"}
             align={"center"}
             justify={"center"}
+            display={{ base: "none", md: "block" }}
           >
             <Image
               src={paperBag.src}

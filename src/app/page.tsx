@@ -15,8 +15,8 @@ import {
 } from "@mantine/core";
 import heroImage from "@/assets/images/scracth.png";
 import ShopNow from "@/component/ShopNow";
-import WomanWithBag from "@/assets/images/pinkBgBag.jpg";
-import officeSpace from "@/assets/images/Office Space with Posters Mockup.jpg";
+// import WomanWithBag from "@/assets/images/pinkBgBag.jpg";
+// import officeSpace from "@/assets/images/Office Space with Posters Mockup.jpg";
 // import mallPoster from "@/assets/images/MallPoster.jpg";
 import flatLogo from "@/assets/logos/LOGO ISOLATED PRIMARY.png";
 import blackBox from "@/assets/images/boxBlack.png";
@@ -58,18 +58,18 @@ export default function Home() {
           top={"100px"}
         >
           <Flex align={"center"} justify={"center"} h={"90%"}>
-            <Box maw={600}>
+            <Box maw={600} px={0}>
               <BackgroundImage
                 src={heroImage.src}
-                w={{ base: 500, md: 700 }}
+                // w={{ base: 500, md: 700 }}
+                w={"100%"}
                 h={500}
               >
                 <Flex
                   align={"center"}
                   justify={"center"}
                   h={"100%"}
-                  p={"md"}
-                  w={{ base: 500, md: 700 }}
+                  // w={{ base: 500, md: 700 }}
                   direction={"column"}
                 >
                   <Text
@@ -105,7 +105,7 @@ export default function Home() {
       </Box>
 
       {/* SERVICES */}
-      <Box bg={"var(--ph-plain-white)"} py={100}>
+      {/* <Box bg={"var(--ph-plain-white)"} py={100}>
         <Container size={1200} px={{ base: 24, xl: 0 }}>
           <Group w={"100%"}>
             <Flex
@@ -167,7 +167,7 @@ export default function Home() {
             </Flex>
           </Group>
         </Container>
-      </Box>
+      </Box> */}
 
       {/* Grid Section */}
       <GridSection />
@@ -222,53 +222,53 @@ export default function Home() {
       </Box> */}
 
       {/* <Box bg={"var(--ph-plain-white)"} py={{ base: 50, md: 100 }}>
-        <Container size={1200} px={{ base: 24, xl: 0 }}>
-          <Flex
-            direction={{ base: "column-reverse", md: "row" }}
-            align={{ base: "flex-start", md: "center" }}
-            justify={{ base: "center", md: "space-between" }}
-            gap={{ base: 20, md: 60 }}
-          >
+          <Container size={1200} px={{ base: 24, xl: 0 }}>
             <Flex
-              flex={1}
-              mih={{ base: 350, md: 500 }}
-              w={"100%"}
-              align={"center"}
-              justify={"center"}
+              direction={{ base: "column-reverse", md: "row" }}
+              align={{ base: "flex-start", md: "center" }}
+              justify={{ base: "center", md: "space-between" }}
+              gap={{ base: 20, md: 60 }}
             >
-              <Image
-                src={officeSpace.src}
-                h={"100%"}
+              <Flex
+                flex={1}
+                mih={{ base: 350, md: 500 }}
                 w={"100%"}
-                alt="womanWithToteBag"
-              />
-            </Flex>
-            <Stack flex={1}>
-              <Text
-                fz={{ base: 38, md: 44 }}
-                fw={{ base: 500, md: 700 }}
-                c={"var(--ph-plain-black)"}
-                ta={"left"}
-                lh={{ base: "38px", md: "44px" }}
+                align={"center"}
+                justify={"center"}
               >
-                Adventure collection is designed to keep up with your dynamic
-                lifestyle, offering durability without compromising on style.
-              </Text>
-              <Text fz={16} fw={400} c={"var(--ph-black-shade)"} ta={"left"}>
-                Choosing the right size is crucial when it comes to bags. Use
-                our comprehensive size guide to ensure your bag is not only
-                stylish but also perfectly suited to your needs. From compact
-                crossbodies to spacious totes, we&apos;ve got the right size for
-                every occasion.
-              </Text>
-              <ShopNow
-                bgColor="var(--ph-plain-black)"
-                textColor="var(--ph-plain-white)"
-              />
-            </Stack>
-          </Flex>
-        </Container>
-      </Box> */}
+                <Image
+                  src={officeSpace.src}
+                  h={"100%"}
+                  w={"100%"}
+                  alt="womanWithToteBag"
+                />
+              </Flex>
+              <Stack flex={1}>
+                <Text
+                  fz={{ base: 38, md: 44 }}
+                  fw={{ base: 500, md: 700 }}
+                  c={"var(--ph-plain-black)"}
+                  ta={"left"}
+                  lh={{ base: "38px", md: "44px" }}
+                >
+                  Adventure collection is designed to keep up with your dynamic
+                  lifestyle, offering durability without compromising on style.
+                </Text>
+                <Text fz={16} fw={400} c={"var(--ph-black-shade)"} ta={"left"}>
+                  Choosing the right size is crucial when it comes to bags. Use
+                  our comprehensive size guide to ensure your bag is not only
+                  stylish but also perfectly suited to your needs. From compact
+                  crossbodies to spacious totes, we&apos;ve got the right size for
+                  every occasion.
+                </Text>
+                <ShopNow
+                  bgColor="var(--ph-plain-black)"
+                  textColor="var(--ph-plain-white)"
+                />
+              </Stack>
+            </Flex>
+          </Container>
+        </Box> */}
 
       {/* STEPS */}
       <OrderSteps />
@@ -348,7 +348,7 @@ export default function Home() {
         </Container>
       </Box>
 
-      <Box bg={"var(--ph-plain-white)"} py={{ base: 50, md: 100 }}>
+      {/* <Box bg={"var(--ph-plain-white)"} py={{ base: 50, md: 100 }}>
         <Container size={1200} px={{ base: 24, xl: 0 }}>
           <Text fz={16} fw={400} c={"var(--ph-plain-black)"} ta={"center"}>
             Urban Explorer & Adventure Seeker
@@ -408,7 +408,7 @@ export default function Home() {
             </Flex>
           </Flex>
         </Container>
-      </Box>
+      </Box> */}
 
       <FeaturedProducts />
 

@@ -6,11 +6,13 @@ import GridSection from "@/component/GridSection";
 import { Box, Container, Stack, Text } from "@mantine/core";
 import React from "react";
 
-export default function CosmeticBoxes() {
+export default function CustomApparelBoxes() {
   return (
     <>
       <Breadcrumb
-        items={[{ title: "Cosmetic Boxes", href: "cosmetic-boxes" }]}
+        items={[
+          { title: "Custom Apparel Boxes", href: "custom-apparel-boxes" },
+        ]}
       />
 
       <GridSection />

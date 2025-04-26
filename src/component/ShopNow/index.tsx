@@ -41,6 +41,11 @@ export default function ShopNow({ bgColor, textColor }: ShopNowProps) {
         onClose={close}
         title={"Get Free Quote"}
         size={"lg"}
+        styles={{
+          title: {
+            fontSize: 25,
+          },
+        }}
       >
         <Stack gap={20}>
           <Group grow gap={20}>
@@ -86,8 +91,14 @@ export default function ShopNow({ bgColor, textColor }: ShopNowProps) {
               placeholder="Brief Description And Requirements"
               resize="vertical"
               withAsterisk
+              styles={{
+                input: { height: "200px" },
+              }}
             />
           </Group>
+          <Button variant="filled" color="var(--ph-light-purple)">
+            Submit
+          </Button>
         </Stack>
       </Modal>
     </>
