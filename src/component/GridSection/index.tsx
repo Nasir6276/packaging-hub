@@ -1,7 +1,12 @@
-import { Box, Grid, Text, Stack, Container } from "@mantine/core";
+import { Box, Grid, Text, Stack, Container, Image } from "@mantine/core";
 import React from "react";
+import { Product } from "@/payload-types";
 
-export default function GridSection() {
+interface ProductGrid {
+  products: Product[];
+}
+
+export default function GridSection({ products }: ProductGrid) {
   return (
     <>
       <Box bg={"var(--ph-plain-white)"} py={50}>
@@ -28,25 +33,36 @@ export default function GridSection() {
               seamlessly blend style, functionality, and durability.
             </Text>
             <Grid mt={40} gutter={{ base: 20, md: 40 }} w={"100%"}>
-              {grid.map((name, index) => (
-                <Grid.Col span={{ base: 6, md: 4, lg: 3 }} key={index}>
-                  <Box
-                    h={{ base: 200, md: 300 }}
-                    w={"100%"}
-                    bg={"var(--ph-black-shade)"}
-                  ></Box>
-                  <Text
-                    mt={10}
-                    fz={16}
-                    fw={400}
-                    c={"var(--ph-plain-black)"}
-                    ta={"left"}
-                    maw={700}
-                  >
-                    {name}
-                  </Text>
-                </Grid.Col>
-              ))}
+              {products && products.length > 0 ? (
+                products.map((product, index) => (
+                  <Grid.Col span={{ base: 6, md: 4, lg: 3 }} key={index}>
+                    <Box
+                      h={{ base: 200, md: 200 }}
+                      w={"100%"}
+                      bg={"var(--ph-black-shade)"}
+                    >
+                      <Image
+                        src={product.banner}
+                        alt="cbd"
+                        h={"100"}
+                        w={"100%"}
+                      />
+                    </Box>
+                    <Text
+                      mt={10}
+                      fz={16}
+                      fw={400}
+                      c={"var(--ph-plain-black)"}
+                      ta={"left"}
+                      maw={700}
+                    >
+                      {product.title}
+                    </Text>
+                  </Grid.Col>
+                ))
+              ) : (
+                <Text>There are no products</Text>
+              )}
             </Grid>
           </Stack>
         </Container>

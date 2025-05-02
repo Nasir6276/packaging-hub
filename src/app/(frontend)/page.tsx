@@ -6,8 +6,8 @@ import {
   Button,
   Container,
   Flex,
-  Grid,
-  Group,
+  // Grid,
+  // Group,
   Image,
   Stack,
   Text,
@@ -23,7 +23,7 @@ import blackBox from "@/assets/images/boxBlack.png";
 import womanWithBlackBox from "@/assets/images/womanHoldingBoxBlack.png";
 import womanWithToteBag from "@/assets/images/womanHoldingToteBagBlack.png";
 import blackPaperBag from "@/assets/images/blackPaperbag.png";
-import purpleBag from "@/assets/images/purpleBag.png";
+// import purpleBag from "@/assets/images/purpleBag.png";
 import box from "@/assets/images/box (1).png";
 import box2 from "@/assets/images/box (2).png";
 import scroll from "@/assets/images/scroll.png";
@@ -31,8 +31,8 @@ import eco from "@/assets/images/eco-packaging.png";
 import NewsLetterBg from "@/assets/images/Rectangle.png";
 import { Carousel } from "@mantine/carousel";
 import classes from "./demo.module.css";
-import { LuSquareArrowRight } from "react-icons/lu";
-import { LuSquareArrowLeft } from "react-icons/lu";
+// import { LuSquareArrowRight } from "react-icons/lu";
+// import { LuSquareArrowLeft } from "react-icons/lu";
 import FeaturedProducts from "@/component/Featuredproducts";
 import GridSection from "@/component/GridSection";
 import OrderSteps from "@/component/OrderSteps";
