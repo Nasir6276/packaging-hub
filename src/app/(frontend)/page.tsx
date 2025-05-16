@@ -273,7 +273,7 @@ export default function Home() {
       {/* STEPS */}
       <OrderSteps />
 
-      <Box bg={"var(--ph-black-shade-200)"} py={{ base: 50, md: 100 }}>
+      <Box bg={"var(--ph-black-shade-200)"} py={{ base: 50, md: 100 }} style={{zIndex: 3}}>
         <Container size={1200} px={{ base: 24, xl: 0 }}>
           <Stack gap={20}>
             <Image src={flatLogo.src} alt="flatlogo" h={20} w={20} />

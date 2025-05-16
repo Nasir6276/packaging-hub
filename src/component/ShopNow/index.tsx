@@ -29,7 +29,7 @@ export default function ShopNow({ bgColor, textColor }: ShopNowProps) {
         mt={"md"}
         fz={16}
         fw={400}
-        size="md"
+        size="sm"
         // w={150}
         onClick={open}
       >
@@ -75,6 +75,7 @@ export default function ShopNow({ bgColor, textColor }: ShopNowProps) {
               size="lg"
               placeholder="Units"
               data={[
+                "less than 100 units",
                 "100 - 500 units",
                 "500 - 1000 units",
                 "1000 - 5000 units",

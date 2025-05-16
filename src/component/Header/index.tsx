@@ -124,7 +124,7 @@ export default function Header() {
                     </MenuDropdown>
                   </div>
                 </Menu>
-              )
+              ),
             )}
           </Group>
         </Flex>
@@ -378,14 +378,6 @@ const socials = [
 //     name: "Our Packages",
 //     href: "packages",
 //   },
-//   {
-//     name: "Gallery",
-//     href: "gallery",
-//   },
-//   {
-//     name: "Contact",
-//     href: "contact",
-//   },
 // ];
 
 const links = {
@@ -393,13 +385,12 @@ const links = {
   "about us": "about",
   "our packages": {
     "CBD Boxes": "cbd-boxes",
-    "cosmetics boxes": "cosmetic-boxes",
-    "custom apparel boxes": "custom-apparel-boxes",
+    "Cosmetics Boxes": "cosmetic-boxes",
+    "Custom Apparel Boxes": "custom-apparel-boxes",
     "food & beverages boxes": "food-boxes",
     "gift boxes": "gift-boxes",
     "retail boxes": "retail-boxes",
     "sport packaging boxes": "sport-boxes",
     "bakery boxes": "bakery-boxes",
   },
-  gallery: "gallery",
 };
