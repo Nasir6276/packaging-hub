@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 import {
   BackgroundImage,
@@ -23,21 +23,32 @@ import blackBox from "@/assets/images/boxBlack.png";
 import womanWithBlackBox from "@/assets/images/womanHoldingBoxBlack.png";
 import womanWithToteBag from "@/assets/images/womanHoldingToteBagBlack.png";
 import blackPaperBag from "@/assets/images/blackPaperbag.png";
-// import purpleBag from "@/assets/images/purpleBag.png";
 import box from "@/assets/images/box (1).png";
 import box2 from "@/assets/images/box (2).png";
 import scroll from "@/assets/images/scroll.png";
 import eco from "@/assets/images/eco-packaging.png";
 import NewsLetterBg from "@/assets/images/Rectangle.png";
-import { Carousel } from "@mantine/carousel";
+import { Carousel, CarouselSlide } from "@mantine/carousel";
 import classes from "./demo.module.css";
 // import { LuSquareArrowRight } from "react-icons/lu";
 // import { LuSquareArrowLeft } from "react-icons/lu";
 import FeaturedProducts from "@/component/Featuredproducts";
 import GridSection from "@/component/GridSection";
 import OrderSteps from "@/component/OrderSteps";
+import config from "@/payload.config";
+import { getPayload, PaginatedDocs } from "payload";
+import { Product } from "@/payload-types";
 
-export default function Home() {
+export const dynamic = "force-dynamic";
+
+export default async function Home() {
+  const payloadConfig = await config;
+  const payload = await getPayload({ config: payloadConfig });
+
+  const products: PaginatedDocs<Product> = await payload.find({
+    collection: "product",
+  });
+
   return (
     <>
       {/* MAIN */}
@@ -104,176 +115,17 @@ export default function Home() {
         </Container>
       </Box>
 
-      {/* SERVICES */}
-      {/* <Box bg={"var(--ph-plain-white)"} py={100}>
-        <Container size={1200} px={{ base: 24, xl: 0 }}>
-          <Group w={"100%"}>
-            <Flex
-              direction={"column"}
-              align={"center"}
-              justify={"center"}
-              w={"100%"}
-              gap={20}
-            >
-              <Text
-                fz={{ base: 38, md: 44 }}
-                fw={{ base: 500, md: 700 }}
-                c={"var(--ph-plain-black)"}
-                ta={"center"}
-                lh={{ base: "38px", md: "44px" }}
-              >
-                Custom Packaging Boxes With Excellent Services
-              </Text>
-              <Text fz={16} fw={400} c={"var(--ph-black-shade)"} ta={"center"}>
-                A packaging company that designs and manufactures high-quality
-                boxes at reasonable prices is available to serve you.
-              </Text>
-              <Grid gutter={"md"} grow>
-                {aboutGrid.map((i) => (
-                  <Grid.Col span={{ sm: 4, md: 2.4 }} key={i.title} my={10}>
-                    <Flex
-                      align={"center"}
-                      justify={"center"}
-                      direction={"column"}
-                      gap={10}
-                    >
-                      <Image
-                        alt="image"
-                        src={i.image.src}
-                        w={100}
-                        h={100}
-                        mb={10}
-                      />
-                      <Text
-                        fz={18}
-                        fw={500}
-                        c={"var(--ph-plain-black)"}
-                        ta={"center"}
-                      >
-                        {i.title}
-                      </Text>
-                      <Text
-                        fz={16}
-                        fw={400}
-                        c={"var(--ph-black-shade)"}
-                        ta={"center"}
-                      >
-                        {i.desc}
-                      </Text>
-                    </Flex>
-                  </Grid.Col>
-                ))}
-              </Grid>
-            </Flex>
-          </Group>
-        </Container>
-      </Box> */}
-
       {/* Grid Section */}
-      <GridSection />
-
-      {/* <Box bg={"var(--ph-plain-white)"} py={100}>
-        <Container size={1200} px={{ base: 24, xl: 0 }}>
-          <Flex
-            direction={{ base: "column", md: "row" }}
-            align={{ base: "flex-start", md: "center" }}
-            justify={{ base: "center", md: "space-between" }}
-            gap={{ base: 20, md: 60 }}
-          >
-            <Stack flex={1}>
-              <Text
-                fw={400}
-                fz={16}
-                tt={"uppercase"}
-                ta={"left"}
-                c={"var(--ph-plain-black)"}
-              >
-                Your Perfect Fit
-              </Text>
-              <Text
-                fz={{ base: 38, md: 44 }}
-                fw={{ base: 500, md: 700 }}
-                c={"var(--ph-plain-black)"}
-                ta={"left"}
-                lh={{ base: "38px", md: "44px" }}
-              >
-                We believe in fashion that cares for the planet. Our commitment
-                to sustainability goes beyond creating stylish bags – it&apos;s
-                about making a positive impact
-              </Text>
-              <Text fz={16} fw={400} c={"var(--ph-black-shade)"} ta={"left"}>
-                Choosing the right size is crucial when it comes to bags. Use
-                our comprehensive size guide to ensure your bag is not only
-                stylish but also perfectly suited to your needs. From compact
-                crossbodies to spacious totes, we&apos;ve got the right size for
-                every occasion.
-              </Text>
-            </Stack>
-            <Flex flex={1} mih={{ base: 350, md: 500 }} w={"100%"}>
-              <Image
-                src={WomanWithBag.src}
-                h={"100%"}
-                w={"100%"}
-                alt="womanWithToteBag"
-              />
-            </Flex>
-          </Flex>
-        </Container>
-      </Box> */}
-
-      {/* <Box bg={"var(--ph-plain-white)"} py={{ base: 50, md: 100 }}>
-          <Container size={1200} px={{ base: 24, xl: 0 }}>
-            <Flex
-              direction={{ base: "column-reverse", md: "row" }}
-              align={{ base: "flex-start", md: "center" }}
-              justify={{ base: "center", md: "space-between" }}
-              gap={{ base: 20, md: 60 }}
-            >
-              <Flex
-                flex={1}
-                mih={{ base: 350, md: 500 }}
-                w={"100%"}
-                align={"center"}
-                justify={"center"}
-              >
-                <Image
-                  src={officeSpace.src}
-                  h={"100%"}
-                  w={"100%"}
-                  alt="womanWithToteBag"
-                />
-              </Flex>
-              <Stack flex={1}>
-                <Text
-                  fz={{ base: 38, md: 44 }}
-                  fw={{ base: 500, md: 700 }}
-                  c={"var(--ph-plain-black)"}
-                  ta={"left"}
-                  lh={{ base: "38px", md: "44px" }}
-                >
-                  Adventure collection is designed to keep up with your dynamic
-                  lifestyle, offering durability without compromising on style.
-                </Text>
-                <Text fz={16} fw={400} c={"var(--ph-black-shade)"} ta={"left"}>
-                  Choosing the right size is crucial when it comes to bags. Use
-                  our comprehensive size guide to ensure your bag is not only
-                  stylish but also perfectly suited to your needs. From compact
-                  crossbodies to spacious totes, we&apos;ve got the right size for
-                  every occasion.
-                </Text>
-                <ShopNow
-                  bgColor="var(--ph-plain-black)"
-                  textColor="var(--ph-plain-white)"
-                />
-              </Stack>
-            </Flex>
-          </Container>
-        </Box> */}
+      <GridSection products={products.docs} />
 
       {/* STEPS */}
       <OrderSteps />
 
-      <Box bg={"var(--ph-black-shade-200)"} py={{ base: 50, md: 100 }} style={{zIndex: 3}}>
+      <Box
+        bg={"var(--ph-black-shade-200)"}
+        py={{ base: 50, md: 100 }}
+        style={{ zIndex: 3 }}
+      >
         <Container size={1200} px={{ base: 24, xl: 0 }}>
           <Stack gap={20}>
             <Image src={flatLogo.src} alt="flatlogo" h={20} w={20} />
@@ -306,7 +158,7 @@ export default function Home() {
               classNames={classes}
             >
               {CarouselData.map((i) => (
-                <Carousel.Slide key={i.title}>
+                <CarouselSlide key={i.title}>
                   <Flex
                     h={"100%"}
                     align={"flex-start"}
@@ -341,7 +193,7 @@ export default function Home() {
                       </Text>
                     </Box>
                   </Flex>
-                </Carousel.Slide>
+                </CarouselSlide>
               ))}
             </Carousel>
           </Stack>
@@ -411,73 +263,6 @@ export default function Home() {
       </Box> */}
 
       <FeaturedProducts />
-
-      <Box bg={"var(--ph-plain-white)"} py={{ base: 50, md: 100 }} px={0}>
-        <Container size={1200} px={0}>
-          <BackgroundImage
-            src={NewsLetterBg.src}
-            mih={500}
-            w={"100%"}
-            px={{ base: 24, xl: 100 }}
-            py={{ base: 50, md: 100 }}
-          >
-            <Flex
-              gap={20}
-              w={"100%"}
-              direction={"column"}
-              align={{ base: "flex-start", md: "flex-end" }}
-            >
-              <Text
-                fz={{ base: 38, md: 44 }}
-                fw={{ base: 500, md: 800 }}
-                c={"var(--ph-plain-white)"}
-                ta={"left"}
-                w={{ base: "100%", md: "50%" }}
-                lh={"60px"}
-              >
-                Join the Packaging Hub Subscribe to Our Newsletter
-              </Text>
-              <Text
-                fz={16}
-                fw={400}
-                c={"#fff"}
-                ta={"left"}
-                w={{ base: "100%", md: "50%" }}
-              >
-                Be the first to know about new arrivals, exclusive promotions,
-                and the latest trends in the world of bags. Sign up for our
-                newsletter and stay connected with the Packaging Hub lifestyle.
-              </Text>
-              <Flex
-                align={"flex-start"}
-                w={{ base: "100%", md: "50%" }}
-                gap={10}
-              >
-                <TextInput
-                  placeholder="Email Address"
-                  flex={1}
-                  size="lg"
-                  radius={0}
-                  styles={{
-                    input: {
-                      backgroundColor: "transparent",
-                      color: "#fff",
-                      border: "1px solid #fff",
-                      "::placeholder": {
-                        color: "#fff",
-                        opacity: 1, // optional, ensures full opacity
-                      },
-                    },
-                  }}
-                />
-                <Button radius={0} size="lg">
-                  Submit
-                </Button>
-              </Flex>
-            </Flex>
-          </BackgroundImage>
-        </Container>
-      </Box>
     </>
   );
 }

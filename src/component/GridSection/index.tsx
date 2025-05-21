@@ -1,3 +1,5 @@
+"use client";
+
 import { Box, Grid, Text, Stack, Container, Image } from "@mantine/core";
 import React from "react";
 import g1 from "@/assets/images/g1.jpeg";
@@ -9,8 +11,9 @@ import g6 from "@/assets/images/g6.jpeg";
 import g7 from "@/assets/images/g7.jpeg";
 import g8 from "@/assets/images/g8.jpeg";
 import "./gridsection.css";
+import { Product } from "../../payload-types";
 
-export default function GridSection() {
+export default function GridSection({ products }: { products: Product[] }) {
   return (
     <>
       <Box bg={"var(--ph-plain-white)"} py={50}>
@@ -38,14 +41,7 @@ export default function GridSection() {
             </Text>
             <Grid mt={40} gutter={{ base: 20, md: 40 }} w={"100%"}>
               {grid.map((i, index) => (
-                <Grid.Col span={{ base: 6, md: 4, lg: 3 }} key={index}>
-                  {/* <Box
-                    h={{ base: 200, md: 300 }}
-                    w={"100%"}
-                    bg={"var(--ph-black-shade)"}
-                  >
-                    <Image src={i.image.src} alt="cbd" h={"100%"} w={"100%"} />
-                  </Box> */}
+                <Grid.Col span={{ base: 6, md: 3, lg: 3 }} key={index}>
                   <div className="card">
                     <div className="card-inner">
                       <div className="card-front">
@@ -80,6 +76,25 @@ export default function GridSection() {
               ))}
             </Grid>
           </Stack>
+          {products.map((product, index) => {
+            return (
+              <div key={index}>
+                <Text>{product.title}</Text>
+                <Image
+                  src={
+                    typeof product?.banner === "string"
+                      ? product?.banner
+                      : product.banner.thumbnailURL
+                  }
+                  alt={product.title}
+                  w={300}
+                  h={300}
+                  radius="md"
+                  fit="contain"
+                />
+              </div>
+            );
+          })}
         </Container>
       </Box>
     </>

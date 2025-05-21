@@ -1,46 +1,26 @@
-"use client";
+// "use client";
 
-import { BackgroundImage, Box, Container, Flex, Text } from "@mantine/core";
+import {
+  BackgroundImage,
+  Box,
+  Container,
+  Flex,
+  Image,
+  Text,
+  Stack,
+} from "@mantine/core";
 import React from "react";
 // import WomanWithBag from "@/assets/images/womanHoldingToteBagBlack.png";
 import MallPoster from "@/assets/images/MallPoster.jpg";
-import womanWithToteBag from "@/assets/images/pinkBgBag.jpg";
+import WomanWithBag from "@/assets/images/pinkBgBag.jpg";
 import FeaturedProducts from "@/component/Featuredproducts";
 import Breadcrumb from "@/component/BreadCrumb";
+import officeSpace from "@/assets/images/Office Space with Posters Mockup.jpg";
+import ShopNow from "@/component/ShopNow";
 
 export default function About() {
   return (
     <>
-      {/* <Box bg={"var(--ph-dark-purple)"}>
-        <Container h={500} size={1200} p={50} top={"100px"}>
-          <Flex
-            direction={"column"}
-            align={"flex-start"}
-            justify={"flex-end"}
-            h={"100%"}
-          >
-            <Text
-              fw={800}
-              fz={{ base: 50, md: 80 }}
-              c={"var(--ph-plain-white)"}
-              ta={"left"}
-            >
-              About
-            </Text>
-            <Text
-              fw={400}
-              fz={16}
-              maw={400}
-              c={"var(--ph-plain-white)"}
-              ta={"left"}
-            >
-              We believe in the power of a well-crafted bag to enhance your
-              lifestyle. Explore our curated collection of premium bags that
-              seamlessly blend style, functionality, and durability.
-            </Text>
-          </Flex>
-        </Container>
-      </Box> */}
       <Breadcrumb items={[{ title: "About", href: "/about" }]} />
 
       <Box bg={"var(--ph-plain-white)"}>
@@ -62,110 +42,102 @@ export default function About() {
         </Container>
       </Box>
 
-      <Box>
-        <Flex direction={{ base: "column", md: "row" }}>
+      <Box bg={"var(--ph-plain-white)"} py={100}>
+        <Container size={1200} px={{ base: 24, xl: 0 }}>
           <Flex
-            flex={1}
-            align={"flex-end"}
-            justify={"flex-end"}
-            bg={"var(--ph-light-purple)"}
+            direction={{ base: "column", md: "row" }}
+            align={{ base: "flex-start", md: "center" }}
+            justify={{ base: "center", md: "space-between" }}
+            gap={{ base: 20, md: 60 }}
           >
-            <BackgroundImage src={womanWithToteBag.src} h={600} maw={600} />
+            <Stack flex={1}>
+              <Text
+                fw={400}
+                fz={16}
+                tt={"uppercase"}
+                ta={"left"}
+                c={"var(--ph-plain-black)"}
+              >
+                Your Perfect Fit
+              </Text>
+              <Text
+                fz={{ base: 38, md: 44 }}
+                fw={{ base: 500, md: 700 }}
+                c={"var(--ph-plain-black)"}
+                ta={"left"}
+                lh={{ base: "38px", md: "44px" }}
+              >
+                We believe in fashion that cares for the planet. Our commitment
+                to sustainability goes beyond creating stylish bags – it&apos;s
+                about making a positive impact
+              </Text>
+              <Text fz={16} fw={400} c={"var(--ph-black-shade)"} ta={"left"}>
+                Choosing the right size is crucial when it comes to bags. Use
+                our comprehensive size guide to ensure your bag is not only
+                stylish but also perfectly suited to your needs. From compact
+                crossbodies to spacious totes, we&apos;ve got the right size for
+                every occasion.
+              </Text>
+            </Stack>
+            <Flex flex={1} mih={{ base: 350, md: 500 }} w={"100%"}>
+              <Image
+                src={WomanWithBag.src}
+                h={"100%"}
+                w={"100%"}
+                alt="womanWithToteBag"
+              />
+            </Flex>
           </Flex>
-          <Flex
-            flex={1}
-            p={50}
-            align={"flex-start"}
-            justify={"center"}
-            bg={"var(--ph-black-shade)"}
-            direction={"column"}
-          >
-            <Text
-              fz={18}
-              fw={500}
-              c={"var(--ph-plain-black)"}
-              ta={"left"}
-              tt={"uppercase"}
-            >
-              Our Factories
-            </Text>
-            <Text
-              fz={{ base: 38, md: 44 }}
-              fw={{ base: 500, md: 800 }}
-              c={"var(--ph-plain-black)"}
-              ta={"left"}
-              tt={"uppercase"}
-            >
-              Our ethical approach.
-            </Text>
-
-            <Text fz={16} fw={400} c={"var(--ph-plain-black)"} ta={"left"}>
-              We spend months finding the best factories around the world—the
-              same ones that produce your favorite designer labels. We visit
-              them often and build strong personal relationships with the
-              owners. Each factory is given a compliance audit to evaluate
-              factors like fair wages, reasonable hours, and environment. Our
-              goal? A score of 90 or above for every factory.
-            </Text>
-          </Flex>
-        </Flex>
+        </Container>
       </Box>
 
-      <Box>
-        <BackgroundImage src={MallPoster.src} h={600} />
-      </Box>
-
-      <Box>
-        <Flex direction={{ base: "column", md: "row" }}>
+      <Box bg={"var(--ph-plain-white)"} py={{ base: 50, md: 100 }}>
+        <Container size={1200} px={{ base: 24, xl: 0 }}>
           <Flex
-            flex={1}
-            p={50}
-            align={"flex-start"}
-            justify={"center"}
-            direction={"column"}
-            bg={"var(--ph-dark-purple)"}
+            direction={{ base: "column-reverse", md: "row" }}
+            align={{ base: "flex-start", md: "center" }}
+            justify={{ base: "center", md: "space-between" }}
+            gap={{ base: 20, md: 60 }}
           >
-            <Text
-              fz={18}
-              fw={500}
-              c={"var(--ph-light-purple)"}
-              ta={"left"}
-              tt={"uppercase"}
+            <Flex
+              flex={1}
+              mih={{ base: 350, md: 500 }}
+              w={"100%"}
+              align={"center"}
+              justify={"center"}
             >
-              Our Factories
-            </Text>
-            <Text
-              fz={{ base: 38, md: 44 }}
-              fw={{ base: 500, md: 800 }}
-              c={"var(--ph-light-purple)"}
-              ta={"left"}
-              tt={"uppercase"}
-            >
-              Our ethical approach.
-            </Text>
-
-            <Text fz={16} fw={400} c={"var(--ph-light-purple)"} ta={"left"}>
-              We spend months finding the best factories around the world—the
-              same ones that produce your favorite designer labels. We visit
-              them often and build strong personal relationships with the
-              owners. Each factory is given a compliance audit to evaluate
-              factors like fair wages, reasonable hours, and environment. Our
-              goal? A score of 90 or above for every factory.
-            </Text>
+              <Image
+                src={officeSpace.src}
+                h={"100%"}
+                w={"100%"}
+                alt="womanWithToteBag"
+              />
+            </Flex>
+            <Stack flex={1}>
+              <Text
+                fz={{ base: 38, md: 44 }}
+                fw={{ base: 500, md: 700 }}
+                c={"var(--ph-plain-black)"}
+                ta={"left"}
+                lh={{ base: "38px", md: "44px" }}
+              >
+                Adventure collection is designed to keep up with your dynamic
+                lifestyle, offering durability without compromising on style.
+              </Text>
+              <Text fz={16} fw={400} c={"var(--ph-black-shade)"} ta={"left"}>
+                Choosing the right size is crucial when it comes to bags. Use
+                our comprehensive size guide to ensure your bag is not only
+                stylish but also perfectly suited to your needs. From compact
+                crossbodies to spacious totes, we&apos;ve got the right size for
+                every occasion.
+              </Text>
+              <ShopNow
+                bgColor="var(--ph-plain-black)"
+                textColor="var(--ph-plain-white)"
+              />
+            </Stack>
           </Flex>
-          <Flex
-            flex={1}
-            align={"flex-start"}
-            justify={"flex-start"}
-            bg={"var(--ph-light-purple)"}
-          >
-            <BackgroundImage src={womanWithToteBag.src} h={600} maw={600} />
-          </Flex>
-        </Flex>
-      </Box>
-
-      <Box>
-        <BackgroundImage src={MallPoster.src} h={600} />
+        </Container>
       </Box>
 
       <FeaturedProducts />

@@ -1,3 +1,5 @@
+"use client";
+
 import { Box, Container, Grid, Image, Stack, Text } from "@mantine/core";
 import React from "react";
 import flatLogo from "@/assets/logos/LOGO ISOLATED PRIMARY.png";
