@@ -1,7 +1,7 @@
 "use client";
 
 import { Box, Grid, Text, Stack, Container, Image } from "@mantine/core";
-import React from "react";
+import React, { useEffect } from "react";
 import g1 from "@/assets/images/g1.jpeg";
 import g2 from "@/assets/images/g2.jpeg";
 import g3 from "@/assets/images/g3.jpeg";
@@ -14,6 +14,13 @@ import "./gridsection.css";
 import { Product } from "../../payload-types";
 
 export default function GridSection({ products }: { products: Product[] }) {
+  useEffect(() => {
+    products.map((i) => {
+      const image = i?.banner;
+      console.log(i);
+    });
+  });
+
   return (
     <>
       <Box bg={"var(--ph-plain-white)"} py={50}>
@@ -82,9 +89,9 @@ export default function GridSection({ products }: { products: Product[] }) {
                 <Text>{product.title}</Text>
                 <Image
                   src={
-                    typeof product?.banner === "string"
-                      ? product?.banner
-                      : product.banner.thumbnailURL
+                    typeof product.banner === "string"
+                      ? product.banner
+                      : (product.banner?.url ?? null)
                   }
                   alt={product.title}
                   w={300}
@@ -92,6 +99,7 @@ export default function GridSection({ products }: { products: Product[] }) {
                   radius="md"
                   fit="contain"
                 />
+                <Text>{product.desc}</Text>
               </div>
             );
           })}
